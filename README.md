@@ -1,12 +1,12 @@
-# Getting Started with Create React App
+# Developers of Caviar
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Below is all of the information you will need to contribute to the project.
 
-## Available Scripts
+## All Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+#### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -14,33 +14,72 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm test`
+#### `npm run lint`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Runs eslint with the local configuration.\
+Will warn of any linting problems and list the files involved.
 
-### `npm run build`
+#### `npm run prettier`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Runs prettier with the local settings.\
+Will warn of any prettier problems and list the files involved.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## File Structure
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To keep the project from turning into code-chaos, we will follow a file structure to organize all files and components.
 
-### `npm run eject`
+<pre>
+src/
+ L assets/ [all images, videos, animations, etc.]
+ L components/ [global components]
+    L ExampleComponent
+       L ExampleComponent.tsx
+       L index.ts
+ L pages/ [all pages or sections of the website]
+    L ExamplePage
+       L components/ [local components for the parent page only]
+       L ExamplePage.tsx
+       L index.ts
+ L util/ [constants such as colors, gradients, spacing, etc.]
+</pre>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Updating `master`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+In order to introduce as little errors and bugs as possible to the `master` branch, we will only be able to push to `master` via pull requests.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+When making a new change...
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+1. Fetch the latest from `master`:
 
-## Learn More
+#### `git pull origin master`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2. Create a new branch:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### `git branch branch-name`
+#### `git checkout branch-name`
+
+###### or to do both as the same time:
+
+#### `git checkout -b branch-name`
+
+3. Make the changes and make a commit
+
+#### `git add .`
+
+#### `git commit -m "MY MESSAGE"`
+
+4. Create a pull request:
+
+###### make sure to have the [GitHub CLI](https://cli.github.com).
+
+#### `gh pr create`
+
+###### Then follow the CLI's instructions to add details for the pull request. You can always edit the title and message on GitHub after it has been created, if needed.
+
+5. Once the PR has been approved, you can merge it to master
+
+#### `gh pr merge`
+
+###### choose `squash and merge`.
+
+###### press `Y` to delete the branch locally and on GitHub.
