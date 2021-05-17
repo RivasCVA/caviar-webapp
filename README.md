@@ -42,3 +42,44 @@ src/
        L index.ts
  L util/ [constants such as colors, gradients, spacing, etc.]
 </pre>
+
+## Updating `master`
+
+In order to introduce as little errors and bugs as possible to the `master` branch, we will only be able to push to `master` via pull requests.
+
+When making a new change...
+
+1. Fetch the latest from `master`:
+
+#### `git pull origin master`
+
+2. Create a new branch:
+
+#### `git branch branch-name`
+#### `git checkout branch-name`
+
+###### or to do both as the same time:
+
+#### `git checkout -b branch-name`
+
+3. Make the changes and make a commit
+
+#### `git add .`
+
+#### `git commit -m "MY MESSAGE"`
+
+4. Create a pull request:
+
+###### make sure to have the [GitHub CLI](https://cli.github.com).
+
+#### `gh pr create`
+
+###### Then follow the CLI's instructions to add details for the pull request. You can always edit the title and message on GitHub after it has been created, if needed.
+
+5. Once the PR has been approved, you can merge it to master
+
+#### `gh pr merge`
+
+###### choose `squash and merge`.
+
+###### press `Y` to delete the branch locally and on GitHub.
