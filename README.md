@@ -62,7 +62,7 @@ When making a new change...
 
 #### `git checkout -b branch-name`
 
-3. Make the changes and make a commit
+3. Make the changes and make a commit:
 
 #### `git add .`
 
@@ -76,7 +76,7 @@ When making a new change...
 
 ###### Then follow the CLI's instructions to add details for the pull request. You can always edit the title and message on GitHub after it has been created, if needed.
 
-5. Once the PR has been approved, you can merge it to master
+5. Once the PR has been approved, you can merge it to master:
 
 #### `gh pr merge`
 
