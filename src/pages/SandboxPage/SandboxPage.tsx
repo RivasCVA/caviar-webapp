@@ -3,6 +3,7 @@ import React from 'react';
 import { StyleSheet, css } from 'aphrodite';
 import Color from 'util/Color';
 import Button from 'components/Button';
+import Icon from 'components/Icon';
 
 const SandboxPage = (): JSX.Element => {
     return (
@@ -20,6 +21,15 @@ const SandboxPage = (): JSX.Element => {
                             '<Button title="Hello, world!" onClick={() => alert(\'Hello, world!\')} />'
                         }
                     </code>
+                </p>
+            </div>
+            <div className={css(styles.componentSection)}>
+                <h2>Icon</h2>
+                <div className={css(styles.strut)} />
+                <Icon icon="logo" />
+                <div className={css(styles.strut)} />
+                <p>
+                    <code>{'<Icon icon="logo" />'}</code>
                 </p>
             </div>
         </div>
