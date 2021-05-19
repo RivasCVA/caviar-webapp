@@ -1,11 +1,27 @@
+/* eslint-disable no-alert */
 import React from 'react';
 import { StyleSheet, css } from 'aphrodite';
+import Color from 'util/Color';
+import Button from 'components/Button';
 
 const SandboxPage = (): JSX.Element => {
     return (
         <div className={css(styles.container)}>
             <h1>Sandbox Environment</h1>
             <h3>Showcase our design system</h3>
+            <div className={css(styles.componentSection)}>
+                <h2>Button</h2>
+                <div className={css(styles.strut)} />
+                <Button title="Hello, world!" onClick={() => alert('Hello, world!')} />
+                <div className={css(styles.strut)} />
+                <p>
+                    <code>
+                        {
+                            '<Button title="Hello, world!" onClick={() => alert(\'Hello, world!\')} />'
+                        }
+                    </code>
+                </p>
+            </div>
         </div>
     );
 };
@@ -16,7 +32,17 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         alignItems: 'center',
         minHeight: '100vh',
-        backgroundColor: '#fffeee',
+        backgroundColor: Color.offWhite,
+    },
+    componentSection: {
+        display: 'flex',
+        flexDirection: 'column',
+        width: '95%',
+        height: 'fit-content',
+        margin: '20px 0px',
+    },
+    strut: {
+        margin: '10px 0px',
     },
 });
 
