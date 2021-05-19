@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, css } from 'aphrodite';
+import Color from 'util/Color';
 
 const HomePage = (): JSX.Element => {
     return (
@@ -15,8 +16,8 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         alignItems: 'center',
         minHeight: '100vh',
-        backgroundColor: '#5499C7',
-        color: '#ffffff',
+        backgroundColor: Color.blue,
+        color: Color.white,
     },
 });
 
