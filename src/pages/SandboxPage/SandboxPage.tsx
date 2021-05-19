@@ -3,7 +3,7 @@ import React from 'react';
 import { StyleSheet, css } from 'aphrodite';
 import Color from 'util/Color';
 import Button from 'components/Button';
-import Icon from 'components/Icons';
+import Icon from 'components/Icon';
 
 const SandboxPage = (): JSX.Element => {
     return (
