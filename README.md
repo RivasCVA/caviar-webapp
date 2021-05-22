@@ -48,6 +48,9 @@ src/
 
 In order to introduce as few errors and bugs as possible to the `master` branch, we will only be able to push to `master` via pull requests. **Each pull request will require a review before being able to merge into `master`.**
 
+###### NOTE: The steps below assume you cloned the project (`"forking"` might yield different steps):
+###### `git clone https://github.com/RivasCVA/caviar-webapp.git`
+\
 When making a change...
 
 **1\. Fetch the latest from `master`:**
@@ -84,7 +87,7 @@ When making a change...
 
 ###### 3. Body: Give any extra description if necessary (you can edit the body on GitHub).
 
-###### 4. What's next?: Submit (or "Continue in broswer" if you want to edit the body there before submitting).
+###### 4. What's next?: Submit (or "Continue in browser" if you want to edit the body there before submitting).
 
 ###### NOTE: If the pull request is for an issue, mention the issue number anywhere in the body as "Resolves #1". This allows the issue to close automatically when the pull request is approved and merged.
 
