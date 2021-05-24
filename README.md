@@ -81,13 +81,13 @@ When making a change...
 
 #### `gh pr create`
 
-###### 1. Where should we push the branch?: RivasCVA/caviar-webapp.
+###### 1. Where should we push the branch?: RivasCVA/caviar-webapp
 
-###### 2. Title: Give any reasonable title.
+###### 2. Title: Give any reasonable title
 
-###### 3. Body: Give any extra description if necessary (you can edit the body on GitHub).
+###### 3. Body: Give any extra description if necessary (you can edit the body on GitHub)
 
-###### 4. What's next?: Submit (or "Continue in browser" if you want to edit the body there before submitting).
+###### 4. What's next?: Submit (or "Continue in browser" if you want to edit the body there before submitting)
 
 ###### NOTE: If the pull request is for an issue, mention the issue number anywhere in the body as "Resolves #1". This allows the issue to close automatically when the pull request is approved and merged.
 
@@ -98,7 +98,7 @@ When making a change...
 
 #### `gh pr merge`
 
-###### 1. What merge method?: Squash and merge.
+###### 1. What merge method?: Squash and merge
 
 ###### 2. Delete branch locally and on GitHub?: yes
 
