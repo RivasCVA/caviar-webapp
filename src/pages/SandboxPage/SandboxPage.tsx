@@ -50,11 +50,7 @@ const SandboxPage = (): JSX.Element => {
                 </Link>
                 <div className={css(styles.strut)} />
                 <p>
-                    <code>{'<Link href="test" selected>'}</code>
-                </p>
-                <p>Test Link</p>
-                <p>
-                    <code>{'</Link>'}</code>
+                    <code>{`<Link href="test" selected>Test</Link>`}</code>
                 </p>
             </div>
         </div>
