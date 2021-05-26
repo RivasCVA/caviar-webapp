@@ -4,6 +4,7 @@ import { StyleSheet, css } from 'aphrodite';
 import Color from 'util/Color';
 import Button from 'components/Button';
 import Icon from 'components/Icon';
+import Link from 'components/Link';
 
 const SandboxPage = (): JSX.Element => {
     return (
@@ -30,6 +31,26 @@ const SandboxPage = (): JSX.Element => {
                 <div className={css(styles.strut)} />
                 <p>
                     <code>{'<Icon icon="logo" />'}</code>
+                </p>
+            </div>
+            <div className={css(styles.componentSection)}>
+                <h2>Link (Not Selected)</h2>
+                <div className={css(styles.strut)} />
+                <Link href="test">Test Link</Link>
+                <div className={css(styles.strut)} />
+                <p>
+                    <code>{'<Link href="test">Test Link</Link>'}</code>
+                </p>
+            </div>
+            <div className={css(styles.componentSection)}>
+                <h2>Link (Selected)</h2>
+                <div className={css(styles.strut)} />
+                <Link href="test" selected>
+                    Test Link
+                </Link>
+                <div className={css(styles.strut)} />
+                <p>
+                    <code>{'<Link href="test">Test Link</Link>'}</code>
                 </p>
             </div>
         </div>
