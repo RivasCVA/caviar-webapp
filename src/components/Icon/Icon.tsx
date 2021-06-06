@@ -3,15 +3,32 @@ import { StyleSheet, css } from 'aphrodite';
 import Color from 'util/Color';
 import icons from 'assets/icons';
 
+export type IconType = keyof typeof icons;
+
 type Props = {
-    icon: keyof typeof icons;
+    style?: React.CSSProperties;
+    icon: IconType;
+    backgroundColor?: typeof Color;
 };
 
 const Icon = (props: Props): JSX.Element => {
-    const { icon } = props;
+    const { style, icon, backgroundColor } = props;
     return (
-        <div className={css(styles.container)}>
-            <img className={css(styles.image)} src={icons[icon]} alt="" />
+        <div
+            className={css([
+                styles.container,
+                backgroundColor && { backgroundColor },
+                style && style,
+            ])}
+        >
+            <img
+                className={css([
+                    styles.noDrag,
+                    backgroundColor ? styles.fillPartial : styles.fillFull,
+                ])}
+                src={icons[icon]}
+                alt=""
+            />
         </div>
     );
 };
@@ -23,14 +40,24 @@ const styles = StyleSheet.create({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: Color.black,
         width: 50,
         height: 50,
         borderWidth: 0,
         borderRadius: 8,
     },
-    image: {
+    noDrag: {
+        '-webkit-user-drag': 'none',
+        '-khtml-user-drag': 'none',
+        '-moz-user-drag': 'none',
+        '-o-user-drag': 'none',
+        'user-drag': 'none',
+    },
+    fillPartial: {
         width: '80%',
         height: '80%',
+    },
+    fillFull: {
+        width: '100%',
+        height: '100%',
     },
 });

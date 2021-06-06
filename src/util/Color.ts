@@ -7,6 +7,9 @@ const Color = {
     blue: '#5499c7',
     jungleGreen: '#8fbc97',
     lightBlue: '#bdcdd9',
+    oceanBlue: '#038198',
+    oceanDark: '#021d32',
+    caviar: '#1eae98',
 };
 
 export default Color;
