@@ -8,7 +8,7 @@ export type IconType = keyof typeof icons;
 type Props = {
     style?: React.CSSProperties;
     icon: IconType;
-    backgroundColor?: typeof Color;
+    backgroundColor?: keyof typeof Color;
 };
 
 const Icon = (props: Props): JSX.Element => {
@@ -17,7 +17,10 @@ const Icon = (props: Props): JSX.Element => {
         <div
             className={css([
                 styles.container,
-                backgroundColor && { backgroundColor },
+                backgroundColor &&
+                    StyleSheet.create({
+                        background: { backgroundColor: Color[backgroundColor] },
+                    }).background,
                 style && style,
             ])}
         >
