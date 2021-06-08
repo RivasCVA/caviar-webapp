@@ -27,6 +27,15 @@ const SandboxPage = (): JSX.Element => {
             <div className={css(styles.componentSection)}>
                 <h2>Icon</h2>
                 <div className={css(styles.strut)} />
+                <Icon icon="logo" backgroundColor="black" />
+                <div className={css(styles.strut)} />
+                <p>
+                    <code>{'<Icon icon="logo" backgroundColor="black" />'}</code>
+                </p>
+            </div>
+            <div className={css(styles.componentSection)}>
+                <h2>Icon (no background)</h2>
+                <div className={css(styles.strut)} />
                 <Icon icon="logo" />
                 <div className={css(styles.strut)} />
                 <p>

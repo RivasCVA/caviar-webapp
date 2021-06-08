@@ -9,16 +9,12 @@ type Props = {
 };
 
 const Link = (props: Props): JSX.Element => {
-    const { children, href, selected } = props;
+    const { children, href, selected = false } = props;
     return (
         <a className={css([styles.container, selected && styles.selected])} href={href} type="link">
             {children}
         </a>
     );
-};
-
-Link.defaultProps = {
-    selected: false,
 };
 
 export default Link;

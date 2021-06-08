@@ -1,9 +1,9 @@
 import React from 'react';
 import { StyleSheet, css } from 'aphrodite';
-import icons from 'assets/icons';
+import Icon, { IconType } from 'components/Icon';
 
 type Props = {
-    icon: keyof typeof icons;
+    icon: IconType;
     title: string;
     children: string;
 };
@@ -13,7 +13,7 @@ const TokenomicsItem = (props: Props): JSX.Element => {
     return (
         <div className={css(styles.container)}>
             <div className={css(styles.left)}>
-                <img className={css(styles.icon)} src={icons[icon]} alt="" />
+                <Icon style={styles.icon} icon={icon} />
             </div>
             <div className={css(styles.right)}>
                 <p className={css(styles.title)}>{title}</p>
@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
     left: {
         display: 'flex',
         flex: 2,
-        justifyContent: 'center',
+        alignItems: 'center',
         paddingRight: 20,
     },
     right: {
