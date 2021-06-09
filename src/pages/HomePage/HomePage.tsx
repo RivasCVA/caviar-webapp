@@ -3,6 +3,7 @@ import { StyleSheet, css } from 'aphrodite';
 import Color from 'util/Color';
 import Icon from 'components/Icon';
 import Tokenomics, { TokenomicsItem } from './components/Tokenomics';
+import Roadmap, { RoadmapItem } from './components/Roadmap';
 
 const HomePage = (): JSX.Element => {
     return (
@@ -20,6 +21,21 @@ const HomePage = (): JSX.Element => {
 
             {/** Mission Statement */}
             <p className={css(styles.missionStatement)}>Mission statement</p>
+
+            {/** Roadmap */}
+            <Roadmap title="Roadmap">
+                <RoadmapItem title="Q1">
+                    Dx Presale Contract launch to public Weekly donations to ocean cleanup Organic
+                    growth via all social media (Instagram, Twitter, FaceBook, TikTok) Listing
+                    Applications (CoinMarket and CoinGecko) Audit Blockfolio Listing LiveCoinWatch
+                    LiveCoinWatch Listing BSCscan and Trust Wallet Logo
+                </RoadmapItem>
+                <RoadmapItem title="Q2">Coming Soon!</RoadmapItem>
+                <RoadmapItem title="Q3">Coming Soon!</RoadmapItem>
+                <RoadmapItem title="Q4" isLast>
+                    Coming Soon!
+                </RoadmapItem>
+            </Roadmap>
 
             {/** Tokenomics Section */}
             <Tokenomics title="Tokenomics">
@@ -81,7 +97,7 @@ const styles = StyleSheet.create({
         marginTop: 40,
         marginBottom: 20,
         font: '85px Roboto',
-        color: Color.caviar,
+        color: Color.caviarGreen,
     },
     missionStatement: {
         marginBottom: 35,
