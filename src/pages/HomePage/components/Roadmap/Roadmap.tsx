@@ -11,7 +11,7 @@ const Roadmap = (props: Props): JSX.Element => {
     return (
         <div className={css(styles.container)}>
             <h2 className={css(styles.title)}>{title}</h2>
-            <div className={css(styles.grid)}>{children}</div>
+            <div className={css(styles.column)}>{children}</div>
         </div>
     );
 };
@@ -29,10 +29,9 @@ const styles = StyleSheet.create({
         font: '500 28px Roboto Mono',
         paddingBottom: 40,
     },
-    grid: {
+    column: {
         display: 'flex',
-        flexWrap: 'wrap',
-        justifyContent: 'center',
-        width: 'min(750px, 100%)',
+        flexDirection: 'column',
+        alignItems: 'center',
     },
 });

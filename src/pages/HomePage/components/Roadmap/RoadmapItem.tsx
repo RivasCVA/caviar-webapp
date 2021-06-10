@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
     bar: {
         display: 'flex',
         flex: 1,
-        width: 2,
+        width: 4,
         background: 'black',
     },
 });
