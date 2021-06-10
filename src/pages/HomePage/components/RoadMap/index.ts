@@ -1,2 +1,2 @@
-export { default } from './RoadMap';
-export { RoadMapItem } from './RoadMapItem';
+export { default } from './Roadmap';
+export { RoadmapItem } from './RoadmapItem';
