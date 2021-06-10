@@ -6,7 +6,7 @@ type Props = {
     children: JSX.Element | JSX.Element[];
 };
 
-const Roadmap = (props: Props): JSX.Element => {
+const RoadMap = (props: Props): JSX.Element => {
     const { title, children } = props;
     return (
         <div className={css(styles.container)}>
@@ -16,7 +16,7 @@ const Roadmap = (props: Props): JSX.Element => {
     );
 };
 
-export default Roadmap;
+export default RoadMap;
 
 const styles = StyleSheet.create({
     container: {

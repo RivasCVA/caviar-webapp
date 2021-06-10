@@ -8,7 +8,7 @@ type Props = {
     isLast?: boolean;
 };
 
-const RoadmapItem = (props: Props): JSX.Element => {
+const RoadMapItem = (props: Props): JSX.Element => {
     const { title, children, isLast = false } = props;
     return (
         <div className={css(styles.container)}>
@@ -23,7 +23,7 @@ const RoadmapItem = (props: Props): JSX.Element => {
     );
 };
 
-export { RoadmapItem };
+export { RoadMapItem };
 
 const styles = StyleSheet.create({
     container: {
