@@ -4,6 +4,7 @@ import Color from 'util/Color';
 import Icon from 'components/Icon';
 import Tokenomics, { TokenomicsItem } from './components/Tokenomics';
 import Roadmap, { RoadmapItem } from './components/Roadmap';
+import Community, { CommunityItem } from './components/Community';
 
 const HomePage = (): JSX.Element => {
     return (
@@ -55,6 +56,16 @@ const HomePage = (): JSX.Element => {
                     2% donated towards ocean cleanup
                 </TokenomicsItem>
             </Tokenomics>
+
+            {/** Roadmap */}
+            <Community title="Join Our Community!">
+                <CommunityItem icon="telegram" href="https://telegram.org/" />
+                <CommunityItem icon="facebook" href="https://facebook.com/" />
+                <CommunityItem icon="reddit" href="https://reddit.com/" />
+                <CommunityItem icon="tiktok" href="https://tiktok.com/" />
+                <CommunityItem icon="twitter" href="https://twitter.com/" />
+                <CommunityItem icon="instagram" href="https://instagram.com/" />
+            </Community>
         </div>
     );
 };
