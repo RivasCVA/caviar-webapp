@@ -58,7 +58,6 @@ const styles = StyleSheet.create({
         width: 55,
         height: 55,
         borderRadius: '50%',
-        boxShadow: `0px 0px 0px 1px ${Color.offBlack}`,
     },
     description: {
         lineHeight: 2,
