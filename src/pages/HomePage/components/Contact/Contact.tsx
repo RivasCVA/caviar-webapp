@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { StyleSheet, css } from 'aphrodite';
 import Button from 'components/Button';
 import Color from 'util/Color';
+import { Title, TextStyle } from 'components/Typography';
+import { Strut } from 'components/Layout';
 
 type Props = {
     title: string;
@@ -49,9 +51,10 @@ const Contact = (props: Props): JSX.Element => {
 
     return (
         <div className={css(styles.container)}>
-            <h2 className={css(styles.title)}>{title}</h2>
+            <Title>{title}</Title>
+            <Strut size={15} />
             <input
-                className={css(styles.input)}
+                className={css(TextStyle, styles.input)}
                 value={email}
                 type="email"
                 placeholder="Email"
@@ -59,7 +62,7 @@ const Contact = (props: Props): JSX.Element => {
                 onFocus={handleFocus}
             />
             <input
-                className={css(styles.input)}
+                className={css(TextStyle, styles.input)}
                 value={name}
                 type="text"
                 placeholder="Name"
@@ -67,13 +70,13 @@ const Contact = (props: Props): JSX.Element => {
                 onFocus={handleFocus}
             />
             <textarea
-                className={css(styles.textarea)}
+                className={css(TextStyle, styles.input, styles.textarea)}
                 value={message}
                 placeholder="Message"
                 onChange={(event) => setMessage(event.target.value)}
                 onFocus={handleFocus}
             />
-            <p className={css(styles.error)}>{error}</p>
+            <p className={css(TextStyle, styles.error)}>{error}</p>
             <Button title="Submit" onClick={handleSubmit} />
         </div>
     );
@@ -87,33 +90,21 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         alignItems: 'center',
     },
-    title: {
-        font: '500 28px Roboto Mono',
-        paddingTop: 50,
-        paddingBottom: 10,
-    },
     input: {
         width: 250,
         height: 40,
-        font: '14px Poppins',
         paddingLeft: 10,
         border: 'none',
         borderRadius: 8,
         margin: '10px 0px',
     },
     textarea: {
-        width: 250,
         height: 80,
-        font: '14px Poppins',
-        paddingLeft: 10,
         paddingTop: 10,
-        border: 'none',
-        borderRadius: 8,
-        margin: '10px 0px',
     },
     error: {
-        font: '400 16px Poppins',
-        height: 35,
+        fontWeight: 400,
         color: Color.red,
+        height: 35,
     },
 });

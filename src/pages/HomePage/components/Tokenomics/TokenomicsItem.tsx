@@ -1,6 +1,8 @@
 import React from 'react';
 import { StyleSheet, css } from 'aphrodite';
 import Icon, { IconType } from 'components/Icon';
+import { TextStyle } from 'components/Typography';
+import Color from 'util/Color';
 
 type Props = {
     icon: IconType;
@@ -16,8 +18,8 @@ const TokenomicsItem = (props: Props): JSX.Element => {
                 <Icon style={styles.icon} icon={icon} />
             </div>
             <div className={css(styles.right)}>
-                <p className={css(styles.title)}>{title}</p>
-                <p className={css(styles.description)}>{children}</p>
+                <p className={css(styles.itemTitle)}>{title}</p>
+                <p className={css(TextStyle)}>{children}</p>
             </div>
         </div>
     );
@@ -35,21 +37,20 @@ const styles = StyleSheet.create({
         display: 'flex',
         flex: 2,
         alignItems: 'center',
-        paddingRight: 20,
+        paddingRight: 10,
     },
     right: {
         display: 'flex',
         flex: 9,
         flexDirection: 'column',
+        paddingLeft: 10,
     },
     icon: {
-        width: '100%',
+        width: '95%',
     },
-    title: {
-        font: '22px Roboto Mono',
+    itemTitle: {
+        font: '500 20px Poppins',
+        color: Color.offBlack,
         paddingBottom: 5,
-    },
-    description: {
-        font: '18px Roboto Mono',
     },
 });
