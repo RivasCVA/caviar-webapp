@@ -5,6 +5,7 @@ import Icon from 'components/Icon';
 import Tokenomics, { TokenomicsItem } from './components/Tokenomics';
 import Roadmap, { RoadmapItem } from './components/Roadmap';
 import Community, { CommunityItem } from './components/Community';
+import Contact from './components/Contact';
 
 const HomePage = (): JSX.Element => {
     return (
@@ -66,6 +67,9 @@ const HomePage = (): JSX.Element => {
                 <CommunityItem icon="twitter" href="https://twitter.com/" />
                 <CommunityItem icon="instagram" href="https://instagram.com/" />
             </Community>
+
+            {/* Contact Us */}
+            <Contact title="Contact Us" />
         </div>
     );
 };
@@ -77,6 +81,7 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         alignItems: 'center',
         minHeight: '100vh',
+        paddingBottom: 50,
     },
     background: {
         position: 'absolute',
