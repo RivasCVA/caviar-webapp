@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, css } from 'aphrodite';
 import Color from 'util/Color';
 import Icon from 'components/Icon';
+import { Strut } from 'components/Layout';
 import Tokenomics, { TokenomicsItem } from './components/Tokenomics';
 import Roadmap, { RoadmapItem } from './components/Roadmap';
 import Community, { CommunityItem } from './components/Community';
@@ -19,18 +20,34 @@ const HomePage = (): JSX.Element => {
             <Icon style={styles.logo} icon="logo" />
 
             {/** Title */}
-            <h1 className={css(styles.title)}>Caviar</h1>
+            <Strut size={40} />
+            <h1 className={css(styles.caviarTitle)}>Caviar</h1>
+            <Strut size={20} />
 
             {/** Mission Statement */}
             <p className={css(styles.missionStatement)}>Mission statement</p>
+            <Strut size={35} />
 
             {/** Roadmap */}
             <Roadmap title="Roadmap">
                 <RoadmapItem title="Q1">
-                    Dx Presale Contract launch to public Weekly donations to ocean cleanup Organic
-                    growth via all social media (Instagram, Twitter, FaceBook, TikTok) Listing
-                    Applications (CoinMarket and CoinGecko) Audit Blockfolio Listing LiveCoinWatch
-                    LiveCoinWatch Listing BSCscan and Trust Wallet Logo
+                    Dx Presale
+                    <br />
+                    Contract launch to public
+                    <br />
+                    Weekly donations to ocean cleanup
+                    <br />
+                    Organic growth via all social media
+                    <br />
+                    Listing applications
+                    <br />
+                    Audit
+                    <br />
+                    Blockfolio listing
+                    <br />
+                    LiveCoinWatch Listing
+                    <br />
+                    BSCscan and Trust Wallet Logo
                 </RoadmapItem>
                 <RoadmapItem title="Q2">Coming Soon!</RoadmapItem>
                 <RoadmapItem title="Q3">Coming Soon!</RoadmapItem>
@@ -38,6 +55,7 @@ const HomePage = (): JSX.Element => {
                     Coming Soon!
                 </RoadmapItem>
             </Roadmap>
+            <Strut size={45} />
 
             {/** Tokenomics Section */}
             <Tokenomics title="Tokenomics">
@@ -57,6 +75,7 @@ const HomePage = (): JSX.Element => {
                     2% donated towards ocean cleanup
                 </TokenomicsItem>
             </Tokenomics>
+            <Strut size={45} />
 
             {/** Join Community */}
             <Community title="Join Our Community!">
@@ -67,9 +86,11 @@ const HomePage = (): JSX.Element => {
                 <CommunityItem icon="twitter" href="https://twitter.com/" />
                 <CommunityItem icon="instagram" href="https://instagram.com/" />
             </Community>
+            <Strut size={45} />
 
             {/* Contact Us */}
             <Contact title="Contact Us" />
+            <Strut size={45} />
         </div>
     );
 };
@@ -81,7 +102,6 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         alignItems: 'center',
         minHeight: '100vh',
-        paddingBottom: 50,
     },
     background: {
         position: 'absolute',
@@ -109,14 +129,11 @@ const styles = StyleSheet.create({
         `,
         zIndex: -1,
     },
-    title: {
-        marginTop: 40,
-        marginBottom: 20,
+    caviarTitle: {
         font: '85px Roboto',
         color: Color.caviarGreen,
     },
     missionStatement: {
-        marginBottom: 35,
         font: '300 22px Poppins',
         color: Color.offWhite,
     },
@@ -124,13 +141,13 @@ const styles = StyleSheet.create({
         position: 'absolute',
         left: 10,
         top: 10,
-        width: 50,
-        height: 50,
+        width: 45,
+        height: 45,
         '@media (max-width: 600px)': {
             left: 8,
             top: 8,
-            width: 40,
-            height: 40,
+            width: 35,
+            height: 35,
         },
     },
 });

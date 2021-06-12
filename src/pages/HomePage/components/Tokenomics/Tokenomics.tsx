@@ -1,5 +1,7 @@
 import React from 'react';
 import { StyleSheet, css } from 'aphrodite';
+import { Title } from 'components/Typography';
+import { Strut } from 'components/Layout';
 
 type Props = {
     title: string;
@@ -10,7 +12,8 @@ const Tokenomics = (props: Props): JSX.Element => {
     const { title, children } = props;
     return (
         <div className={css(styles.container)}>
-            <h2 className={css(styles.title)}>{title}</h2>
+            <Title>{title}</Title>
+            <Strut size={15} />
             <div className={css(styles.grid)}>{children}</div>
         </div>
     );
@@ -24,10 +27,6 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         alignItems: 'center',
         width: '100%',
-    },
-    title: {
-        font: '500 28px Roboto Mono',
-        paddingBottom: 15,
     },
     grid: {
         display: 'flex',

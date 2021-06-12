@@ -1,10 +1,11 @@
 import React from 'react';
 import { StyleSheet, css } from 'aphrodite';
 import Color from 'util/Color';
+import { TextStyle } from 'components/Typography';
 
 type Props = {
     title: string;
-    children: string;
+    children: string | React.ReactNode;
     isLast?: boolean;
 };
 
@@ -13,11 +14,11 @@ const RoadmapItem = (props: Props): JSX.Element => {
     return (
         <div className={css(styles.container)}>
             <div className={css(styles.left)}>
-                <p className={css(styles.title)}>{title}</p>
+                <p className={css(styles.quarterTitle)}>{title}</p>
                 {!isLast && <div className={css(styles.bar)} />}
             </div>
             <div className={css(styles.right)}>
-                <p className={css(styles.description)}>{children}</p>
+                <p className={css(TextStyle, styles.description)}>{children}</p>
             </div>
         </div>
     );
@@ -29,39 +30,43 @@ const styles = StyleSheet.create({
     container: {
         display: 'flex',
         width: 400,
-        margin: '3px 120px',
-        marginTop: -20,
+        '@media (max-width: 600px)': {
+            width: '95%',
+        },
     },
     left: {
         display: 'flex',
         flex: 2,
         alignItems: 'center',
         flexDirection: 'column',
+        paddingTop: -20,
     },
     right: {
         display: 'flex',
         flex: 9,
         flexDirection: 'row',
+        paddingTop: 5,
+        paddingLeft: 10,
     },
-    title: {
-        font: '24px Roboto Mono',
-        color: 'white',
-        background: Color.caviarGreen,
-        width: 50,
-        height: 50,
-        borderRadius: '50%',
+    quarterTitle: {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
+        font: '500 20px Poppins',
+        background: Color.caviarGreen,
+        color: 'white',
+        width: 55,
+        height: 55,
+        borderRadius: '50%',
     },
     description: {
-        font: '15px Roboto Mono',
-        paddingBottom: 80,
+        lineHeight: 2,
+        paddingBottom: 40,
     },
     bar: {
         display: 'flex',
         flex: 1,
-        width: 4,
-        background: 'black',
+        width: 5,
+        background: Color.offBlack,
     },
 });
