@@ -57,7 +57,7 @@ const HomePage = (): JSX.Element => {
                 </TokenomicsItem>
             </Tokenomics>
 
-            {/** Roadmap */}
+            {/** Join Community */}
             <Community title="Join Our Community!">
                 <CommunityItem icon="telegram" href="https://telegram.org/" />
                 <CommunityItem icon="facebook" href="https://facebook.com/" />

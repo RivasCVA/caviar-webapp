@@ -21,28 +21,14 @@ export { CommunityItem };
 const styles = StyleSheet.create({
     container: {
         display: 'flex',
-        width: 300,
+        width: 40,
         margin: '15px 10px',
-    },
-    left: {
-        display: 'flex',
-        flex: 2,
-        alignItems: 'center',
-        paddingRight: 20,
-    },
-    right: {
-        display: 'flex',
-        flex: 9,
-        flexDirection: 'column',
+        transition: 'transform 450ms',
+        ':hover': {
+            transform: 'scale(1.20)',
+        },
     },
     icon: {
         width: '100%',
-    },
-    title: {
-        font: '22px Roboto Mono',
-        paddingBottom: 5,
-    },
-    description: {
-        font: '18px Roboto Mono',
     },
 });

@@ -11,7 +11,7 @@ const Community = (props: Props): JSX.Element => {
     return (
         <div className={css(styles.container)}>
             <h2 className={css(styles.title)}>{title}</h2>
-            <div className={css(styles.grid)}>{children}</div>
+            <div className={css(styles.horizontal)}>{children}</div>
         </div>
     );
 };
@@ -27,12 +27,11 @@ const styles = StyleSheet.create({
     },
     title: {
         font: '500 28px Roboto Mono',
-        paddingBottom: 15,
+        paddingTop: 50,
+        paddingBottom: 10,
     },
-    grid: {
+    horizontal: {
         display: 'flex',
-        flexWrap: 'wrap',
-        justifyContent: 'center',
-        width: 'min(750px, 100%)',
+        alignItems: 'center',
     },
 });
