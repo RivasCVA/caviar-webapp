@@ -10,7 +10,7 @@ type Props = {
 const CommunityItem = (props: Props): JSX.Element => {
     const { icon, href } = props;
     return (
-        <a className={css(styles.container)} href={href} target="blank">
+        <a className={css(styles.container)} href={href} target="_blank" rel="noreferrer">
             <Icon style={styles.icon} icon={icon} />
         </a>
     );
