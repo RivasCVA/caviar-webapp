@@ -20,13 +20,13 @@ export default Button;
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: Color.purple,
+        backgroundColor: Color.caviarGreen,
         color: Color.white,
-        width: 175,
-        height: 50,
+        width: 120,
+        height: 40,
         borderWidth: 0,
         borderRadius: 8,
-        fontSize: 24,
+        font: '500 18px Poppins',
         cursor: 'pointer',
         transition: 'transform 450ms',
         ':hover': {
