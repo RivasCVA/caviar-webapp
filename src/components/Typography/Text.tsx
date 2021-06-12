@@ -8,12 +8,12 @@ type Props = {
     light?: boolean;
 };
 
-const Title = (props: Props): JSX.Element => {
+const Text = (props: Props): JSX.Element => {
     const { style, children, light = false } = props;
     return <p className={css(styles.text, light && styles.whiteColor, style)}>{children}</p>;
 };
 
-export default Title;
+export default Text;
 
 const styles = StyleSheet.create({
     text: {
