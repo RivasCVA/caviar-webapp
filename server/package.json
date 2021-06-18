@@ -1,0 +1,26 @@
+{
+  "name": "caviar-webapp-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc && node dist/index.js",
+    "lint": "eslint src --ext .js,.ts",
+    "prettier": "prettier --check \"src/**/*.{js,ts}\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.12",
+    "@types/node": "^15.12.3",
+    "eslint": "^7.28.0",
+    "eslint-config-airbnb-typescript-prettier": "^4.2.0",
+    "prettier": "^2.3.1",
+    "typescript": "^4.3.4"
+  }
+}
