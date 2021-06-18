@@ -1,8 +1,8 @@
 <img src="https://user-images.githubusercontent.com/60367213/118917898-7c7e0a80-b8f7-11eb-8e4c-1770886f32e7.png" width="200">
 
-# Developers of Caviar
+# Frontend Developers of Caviar
 
-All of the information you will need to contribute to the project.
+All of the information you will need to contribute to the clint-side project.
 
 ## Scripts
 
