@@ -1,0 +1,21 @@
+{
+    "extends": ["airbnb-typescript-prettier"],
+    "parserOptions": {
+        "project": "./tsconfig.json"
+    },
+    "settings": {
+        "import/resolver": {
+            "node": {
+                "paths": ["src"],
+                "extensions": [".js", ".ts"]
+            }
+        },
+        "react": {
+            "version": "off"
+        }
+    },
+    "rules": {
+        "import/prefer-default-export": "off",
+        "@typescript-eslint/no-use-before-define": "off"
+    }
+}
