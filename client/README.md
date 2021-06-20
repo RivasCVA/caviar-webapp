@@ -2,7 +2,7 @@
 
 # Frontend Developers of Caviar
 
-All of the information you will need to contribute to the clint-side project.
+All of the information you will need to contribute to the client-side project.
 
 ## Scripts
 
