@@ -1,13 +1,25 @@
 import express from 'express';
-import newsletter from './routes/newsletter';
+import mongoose from 'mongoose';
+
+import Debug from './util/debug';
+import contact from './routes/contact';
 
 const PORT = 4000;
 const app = express();
 
 app.use(express.json());
-app.use('/api/newsletter', newsletter);
+app.use('/api/contact', contact);
 
 app.listen(PORT, () => {
-    // eslint-disable-next-line no-console
-    console.log(`\nServer starting...\nLocal: http://localhost:${PORT}`);
+    Debug.db('Server starting....');
+    Debug.db(`Local: http://localhost:${PORT}`);
 });
+
+mongoose
+    .connect('mongodb://localhost/caviardb', { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => {
+        Debug.db('Connecting to mongodb...');
+    })
+    .catch((err) => {
+        Debug.db('Error connecting to mongodb:\n', err);
+    });

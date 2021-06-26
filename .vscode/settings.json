@@ -1,6 +1,7 @@
 {
-	"eslint.workingDirectories": [
+    "eslint.workingDirectories": [
         "client",
         "server"
-	]
+    ],
+    "editor.renderWhitespace": "all", 
 }
