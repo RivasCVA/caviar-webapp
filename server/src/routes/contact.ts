@@ -24,7 +24,7 @@ router.post('/', async (req, res) => {
 });
 
 const contactValidation = Joi.object({
-    name: Joi.string().max(255).required(),
+    name: Joi.string().alphanum().max(255).required(),
     email: Joi.string().min(5).max(255).email().required(),
 });
 
