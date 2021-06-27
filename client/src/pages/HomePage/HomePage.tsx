@@ -7,6 +7,7 @@ import Tokenomics, { TokenomicsItem } from './components/Tokenomics';
 import Roadmap, { RoadmapItem } from './components/Roadmap';
 import Community, { CommunityItem } from './components/Community';
 import Contact from './components/Contact';
+import JoinNewsletter from './components/JoinNewsletter';
 
 const HomePage = (): JSX.Element => {
     return (
@@ -90,6 +91,10 @@ const HomePage = (): JSX.Element => {
 
             {/* Contact Us */}
             <Contact title="Contact Us" />
+            <Strut size={45} />
+
+            {/* Join Newsletter */}
+            <JoinNewsletter title="Join our Newsletter" />
             <Strut size={45} />
         </div>
     );

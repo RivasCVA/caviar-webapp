@@ -24,6 +24,7 @@ const Contact = (props: Props): JSX.Element => {
         }
 
         const emailRegex = /^[^@\s]+@[^@\s.]+\.[^@.\s]+$/;
+
         if (!emailRegex.test(email)) {
             setError('Invalid email');
             return;
@@ -39,6 +40,7 @@ const Contact = (props: Props): JSX.Element => {
             return;
         }
 
+        setError('');
         window.open(
             `mailto:${CAVIAR_EMAIL}?subject=Caviar Contact - ${name}&body=${message}`,
             '_self'
@@ -105,6 +107,7 @@ const styles = StyleSheet.create({
     error: {
         fontWeight: 400,
         color: Color.red,
-        height: 35,
+        minHeight: 35,
+        textAlign: 'center',
     },
 });

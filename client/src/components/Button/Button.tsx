@@ -5,12 +5,18 @@ import Color from 'util/Color';
 type Props = {
     title: string;
     onClick: () => void;
+    disabled?: boolean;
 };
 
 const Button = (props: Props): JSX.Element => {
-    const { title, onClick } = props;
+    const { title, onClick, disabled = false } = props;
     return (
-        <button className={css(styles.container)} onClick={onClick} type="button">
+        <button
+            className={css(styles.container)}
+            onClick={onClick}
+            type="button"
+            disabled={disabled}
+        >
             {title}
         </button>
     );

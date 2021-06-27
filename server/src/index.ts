@@ -1,5 +1,6 @@
 import express from 'express';
 import mongoose from 'mongoose';
+import cors from 'cors';
 
 import Debug from './util/debug';
 import contact from './routes/contact';
@@ -7,6 +8,7 @@ import contact from './routes/contact';
 const PORT = 4000;
 const app = express();
 
+app.use(cors());
 app.use(express.json());
 app.use('/api/contact', contact);
 
